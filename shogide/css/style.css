@@ -1,0 +1,593 @@
+/* background-image:url("./images/woods.png");*/
+
+iframe, object, embed {
+  width: 100%;
+  height: 100%;
+}
+
+.site-name-menu {
+font-size: 36px;
+font-family: 'Caveat Brush', cursive;
+padding: 10px;
+margin-top: 0px;
+
+}
+
+/* so links to id arent hidden by fixed header */
+.anchor{
+  display: block;
+  height: 115px; /*same height as header*/
+  margin-top: -115px; /*same height as header*/
+  visibility: hidden;
+}
+
+
+/* id and class below are needed to display the map */
+#map {
+  height: 100%;
+}
+
+hr {
+  width: 100%;
+  padding: 0px;
+  border-width: 5px;
+  color: red;
+}
+
+.maprow {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #ff8000;
+  color: white;
+}
+
+.foodrow {
+  border: 0px solid black;
+  border-radius: 2px;
+  color: white;
+  font-size: 20px;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+.row {
+  padding: 0px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* above is for the map */
+
+
+
+
+/* GENERAL STYLES */
+.center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* weather widget */
+.aw-widget-current-inner {
+  margin: 0 auto;
+}
+
+
+
+/* below is for social css */
+
+/* for post message area */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+#post_body{
+  font-size: 30px;
+  word-wrap: break-word;
+  height: auto;
+}
+
+#post_text {
+  width:100%;
+  /*min-height: 50px;*/
+  word-wrap: break-word;
+}
+
+/*
+.post_form_area {
+margin-top:60px;
+background-color:orange;
+padding-top:10px;
+padding-bottom:10px;
+border-radius: 5px;
+}
+
+.post_form textarea {
+width: 100%;
+min-height: 80px;
+border-radius: 5px;
+border: 2px solid #D3D3D3;
+font-size: 12px;
+margin-right: 5px;
+padding: 0px;
+}
+*/
+
+/* this controls outer container for both likes and comments */
+.newsfeedPostOptions {
+  padding: 0px;
+  text-decoration: none;
+  color:#20AAE5;
+  border: 0px solid black;
+}
+
+/* this controls container for likes */
+.newsfeedPostOptions iframe {
+  border: 1px solid green;
+  height: 25px;
+  width: 120px;
+  margin-top: 5px;
+}
+
+/* this controls container for comments after it is clicked */
+iframe#comment_iframe {
+  border: 1px solid red;
+  max-height: 250px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/*textarea:focus {
+outline: 0;
+}*/
+
+.post_form input[type="submit"] {
+  width: 11%;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  font-family: 'Bellota-BoldItalic', sans-serif;
+  color: #1E75CA;
+  /*text-shadow: #73B6E2 0.5px 0.5px 0px;*/
+  font-size: 90%;
+  outline: 0;
+  margin: 0;
+}
+
+.post_form input[type="submit"]:active {
+  padding: 5px 4px 4px 5px;
+}
+
+#fileToUpload {
+  border-radius: 5px;
+  border: 2px solid #D3D3D3;
+  background-color: white;
+  width: 100%;
+  min-height: 40px;
+  padding: 0px;
+  margin: 1px;
+}
+
+#fileToUpload select{
+  background-color: black;
+
+}
+
+
+#post_button{
+  border-radius: 5px;
+  border: 2px solid #D3D3D3;
+  padding: 0px;
+  width: 100%;
+  min-height: 40px;
+  background-color: lightgreen;
+  color: black;
+  font-size: 20px;
+}
+
+
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: black;
+}
+
+
+
+
+.postedImage img {
+  max-width: 100%;
+  display: block;
+  margin: 0px auto;
+}
+
+.post_form {
+  width: 100%;
+}
+
+
+
+.status_post {
+  width: 100%;
+  font-size: 20px;
+  padding: 0px 5px;
+  min-height: 75px;
+  cursor:pointer;
+}
+
+.post_profile_pic {
+  float: left;
+  margin-right: 7px;
+}
+
+.post_profile_pic img {
+  border-radius: 5px;
+}
+
+/* BOXES */
+.blackbox {
+  border: 2px solid black;
+}
+
+.redbox {
+  border: 2px solid red;
+  padding: 0px;
+}
+
+.event_box {
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+  background-color: #bfddbb;
+  padding: 5px;
+}
+
+.featured_box {
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 5px;
+  color: black;
+  background-color: #ff8000;
+  padding: 5px;
+}
+
+.offer_box {
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 5px;
+  color: black;
+  background-color: #57866b;
+  margin: 2px;
+}
+
+.bookmrk {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  background-color: #bfddbb;
+	padding-bottom: 10px;color: rgb(22, 22, 22);
+font-size: 20px;
+padding: 10px;
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 10.54054054054054px;
+-moz-border-radius: 10.54054054054054px;
+border-radius: 10.54054054054054px;
+background: rgb(0, 0, 0);
+background: -moz-linear-gradient(92deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+background: -webkit-linear-gradient(92deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+background: -o-linear-gradient(92deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+background: -ms-linear-gradient(92deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+background: linear-gradient(2deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+-webkit-box-shadow: 0px 6px 12px rgba(0, 5, 7, 1);
+-moz-box-shadow:    0px 6px 12px rgba(0, 5, 7, 1);
+box-shadow:         0px 6px 12px rgba(0, 5, 7, 1);
+
+}
+
+.showtopbox {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  background-color: #bfddbb;
+  padding: 10px;
+  color: rgb(22, 22, 22);
+font-size: 20px;
+padding: 20px;
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 10.54054054054054px;
+-moz-border-radius: 10.54054054054054px;
+border-radius: 10.54054054054054px;
+background: rgb(0, 0, 0);
+background: -moz-linear-gradient(92deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+background: -webkit-linear-gradient(92deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+background: -o-linear-gradient(92deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+background: -ms-linear-gradient(92deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+background: linear-gradient(2deg, rgb(0, 0, 0) 0%, rgb(0, 221, 0) 0%);
+-webkit-box-shadow: 0px 6px 12px rgba(0, 5, 7, 1);
+-moz-box-shadow:    0px 6px 12px rgba(0, 5, 7, 1);
+box-shadow:         0px 6px 12px rgba(0, 5, 7, 1);
+
+}
+
+.site-name {
+  font-size: 20px;
+  color: red;
+}
+
+/*NAVIGATION*/
+
+.nav-wrap {
+  border: 10px red;
+}
+
+.navbar, .navbar-inverse {
+  border-radius: 0;
+  border: 1px red;
+  min-height: 57px;
+  color: blue;
+}
+
+/*navigation left side links*/
+.navbar-header h3{
+  color: black;
+  background-color: #57866b;
+  padding-left: 20px;
+}
+
+
+/*navigation right side links*/
+.navbar-nav {
+  float: right;
+  margin: 0;
+  color: black;
+  background-color: #57866b;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+  color: black;
+}
+
+
+
+
+
+.navbar-toggle {
+  background-color: black;
+}
+
+.navbar-inverse {
+  background-color: #57866b;
+  color: black;
+}
+
+
+.navbar-nav > li > a {
+  padding: 18px;
+}
+
+
+
+
+/*navigation background*/
+.navbar-collapse.collapse {
+  background-color: #57866b;
+  border: 10px green;
+}
+
+.nav li {
+  display: inline;
+  color: black;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+  font-family: Lato;
+  font-size: 1.7em;
+  font-weight: 300;
+  /*padding: 30px 25px 33px 25px;*/
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+  background-color: #bfddbb;
+  transition: 0.7s all linear;
+  height: 100%;
+
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: green;
+}
+
+
+
+/*TABLES*/
+
+.table th{
+  border: 2px solid black;
+  background-color: #ff8000;
+  color: white;
+}
+
+.table td{
+  border: 1px solid black;
+  background-color: lightgray;
+  padding: 2px;
+}
+
+.share {
+  border: 1px solid black;
+  background-color: lightgreen;
+  padding: 10px;
+  height: 100%;
+}
+
+/* POPUP*/
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: black;
+  margin: 80px 0;
+}
+
+.box {
+  width: 100%;
+  margin-top: 4px;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  background-color: #ff8000;
+  font-size: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: black;
+  border: 2px solid green;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #bfddbb;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* heading of the message that pops up */
+.popup h2 {
+  margin-top: 0;
+  color: red;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/* body of the message that pops up */
+.popup {
+  color: black;
+  margin: 120px auto;
+  padding: 20px;
+  padding-top: 40px;
+  background: white;
+  border-radius: 5px;
+  width: 90%;
+  position: relative;
+  z-index: 1000;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #bfddbb;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+/* new sorting table */
+/* Table sort indicators */
+
+th.sortable {
+  position: relative;
+  cursor: pointer;
+}
+
+th.sortable::after {
+  font-family: FontAwesome;
+  content: "\f0dc";
+  position: absolute;
+  right: 8px;
+  color: #999;
+}
+
+th.sortable.asc::after {
+  content: "\f0d8";
+}
+
+th.sortable.desc::after {
+  content: "\f0d7";
+}
+
+th.sortable:hover::after {
+  color: #333;
+}
+
+/* Heading styles */
+
+h1.age-header {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+h2.page-header {
+  margin-top: 0px;
+  padding-top: 0px;
+  line-height: 15px;
+  vertical-align: middle;
+}
+
+h1 > .divider:before,
+h2 > .divider:before,
+h3 > .divider:before,
+h4 > .divider:before,
+h5 > .divider:before,
+h6 > .divider:before,
+.h1 > .divider:before,
+.h2 > .divider:before,
+.h3 > .divider:before,
+.h4 > .divider:before,
+.h5 > .divider:before,
+.h6 > .divider:before {
+  color: #777;
+  content: "\0223E\0020";
+}

@@ -4,6 +4,7 @@
 
 # Application
 # web/app/composer.json
+web/app/vendor
 
 # PHPStorm
 .idea/**/workspace.xml
@@ -15,3 +16,6 @@ nbproject/
 /nbproject/
 /nbproject/private/
 /nbproject/private/private.properties
+
+# db
+data/db
